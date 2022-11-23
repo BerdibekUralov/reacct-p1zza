@@ -3,7 +3,11 @@ import { Categories, SortPopup, PizzaBlock} from '../components';
 
 const categoryNames = ['Мясные', 'Вегетарианская', 'Гриль', 'Острые', 'Закрытые'];
 
-const sortIems = ['популярности', 'цене', 'алфавит'];
+const sortIems = [
+  { name: 'популярности', type: 'popular', order: 'desc' },
+  { name: 'цене', type: 'price', order: 'desc' },
+  { name: 'алфавит', type: 'name', order: 'asc' },
+];
 
 function Home({items}) {
 
