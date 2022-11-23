@@ -11,6 +11,12 @@ const filters = (state = initialState, action) => {
       sortBy: action.payloud
     }
   }
+  if(action.type === 'SET_CATEGORY'){
+    return{
+      ...state,
+      sortBy: action.payloud
+    }
+  }
 
   return state;
 }

@@ -1,9 +1,11 @@
 import { createStore } from "redux";
+import rootReducer from "./reducers";
 
-function storeBar() {
-  console.log('Hello');
-}
+const store = createStore(
+  rootReducer,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+);
 
-const store = createStore(storeBar)
+window.store = store;
 
 export default store
